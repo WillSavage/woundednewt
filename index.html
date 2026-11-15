@@ -7,20 +7,15 @@
   <meta name="description" content="Wounded Newt are a 6 piece alternative band from South Lincolnshire. Experimental indie with a rocky punch and a brassy kick." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://woundednewt.co.uk/" />
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://woundednewt.co.uk/" />
   <meta property="og:title" content="Wounded Newt" />
   <meta property="og:description" content="Wounded Newt are a 6 piece alternative band from South Lincolnshire. Experimental indie with a rocky punch and a brassy kick." />
   <meta property="og:image" content="https://woundednewt.co.uk/Wounded-newt-outline-black.jpg" />
-
-  <!-- Twitter/X Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Wounded Newt" />
   <meta name="twitter:description" content="Wounded Newt are a 6 piece alternative band from South Lincolnshire. Experimental indie with a rocky punch and a brassy kick." />
   <meta name="twitter:image" content="https://woundednewt.co.uk/Wounded-newt-outline-black.jpg" />
-
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -40,6 +35,8 @@
       align-items: center;
       gap: 44px;
       padding: 48px 24px;
+      max-width: 560px;
+      width: 100%;
       opacity: 0;
       transform: translateY(14px);
       animation: fadeUp 0.9s ease forwards 0.15s;
@@ -49,21 +46,10 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    .logo {
-      width: min(420px, 88vw);
-    }
+    .logo { width: min(420px, 88vw); }
+    .logo img { width: 100%; height: auto; display: block; }
 
-    .logo img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .container {
-      max-width: 560px;
-      width: 100%;
-    }
-
+    /* --- Social links --- */
     .social-links {
       display: flex;
       align-items: center;
@@ -88,23 +74,12 @@
     }
 
     .social-links a:hover { opacity: 0.35; }
+    .social-links svg { width: 15px; height: 15px; flex-shrink: 0; }
 
-    .social-links svg {
-      width: 15px;
-      height: 15px;
-      flex-shrink: 0;
-    }
+    .divider { width: 1px; height: 16px; background: #d0d0d0; }
 
-    .divider {
-      width: 1px;
-      height: 16px;
-      background: #d0d0d0;
-    }
-
-    /* --- Gigs --- */
-    .gigs { width: 100%; }
-
-    .gigs h2 {
+    /* --- Section headings --- */
+    .section-heading {
       font-size: 11px;
       font-weight: 500;
       letter-spacing: 0.12em;
@@ -113,6 +88,9 @@
       margin-bottom: 16px;
       text-align: center;
     }
+
+    /* --- Gigs --- */
+    .gigs { width: 100%; }
 
     .gig-list {
       width: 100%;
@@ -128,11 +106,7 @@
       border-bottom: 1px solid #eee;
     }
 
-    .gig-info {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
+    .gig-info { display: flex; flex-direction: column; gap: 3px; }
 
     .gig-date {
       font-size: 11px;
@@ -142,16 +116,8 @@
       color: #999;
     }
 
-    .gig-name {
-      font-size: 14px;
-      font-weight: 500;
-      color: #111;
-    }
-
-    .gig-venue {
-      font-size: 13px;
-      color: #666;
-    }
+    .gig-name { font-size: 14px; font-weight: 500; color: #111; }
+    .gig-venue { font-size: 13px; color: #666; }
 
     .gig-ticket {
       display: inline-block;
@@ -167,21 +133,67 @@
       transition: background 0.2s ease, color 0.2s ease;
     }
 
-    .gig-ticket:hover {
-      background: #111;
-      color: #fff;
+    .gig-ticket:hover { background: #111; color: #fff; }
+
+    .no-dates {
+      padding: 20px 0;
+      font-size: 13px;
+      color: #999;
+      text-align: center;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* --- Merch --- */
+    .merch { width: 100%; }
+
+    .merch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .merch-tile {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .merch-tile img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border: 1px solid #eee;
+      transition: opacity 0.2s ease;
+    }
+
+    .merch-tile:hover img { opacity: 0.8; }
+
+    .merch-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: #111;
+    }
+
+    .merch-price {
+      font-size: 12px;
+      color: #999;
     }
   </style>
 </head>
 <body>
   <div class="container">
 
+    <!-- LOGO -->
     <div class="logo">
       <img src="Wounded-newt-outline-black.jpg" alt="Wounded Newt" />
     </div>
 
+    <!-- SOCIAL LINKS -->
     <nav class="social-links" aria-label="Social media">
-      <a href="https://open.spotify.com/artist/woundednewt" target="_blank" rel="noopener noreferrer">
+      <a href="https://open.spotify.com/artist/2fFbhMIaLcHDxwUTcBWCPJ" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
         Spotify
       </a>
@@ -210,10 +222,10 @@
 
     <!-- GIGS -->
     <div class="gigs">
-      <h2>Live dates</h2>
-      <div class="gig-list">
+      <h2 class="section-heading">Live dates</h2>
+      <div class="gig-list" id="gig-list">
 
-        <div class="gig">
+        <div class="gig" data-date="2026-11-06">
           <div class="gig-info">
             <span class="gig-date">Fri 6 Nov</span>
             <span class="gig-name">Wounded Newt &amp; Skelephant</span>
@@ -222,7 +234,7 @@
           <a class="gig-ticket" href="https://www.thekomodo.co.uk/events/live-friday-wounded-newt-skelephant" target="_blank" rel="noopener noreferrer">Tickets</a>
         </div>
 
-        <div class="gig">
+        <div class="gig" data-date="2026-11-07">
           <div class="gig-info">
             <span class="gig-date">Sat 7 Nov</span>
             <span class="gig-name">EP Launch</span>
@@ -231,7 +243,7 @@
           <a class="gig-ticket" href="https://wegottickets.com/f/26193" target="_blank" rel="noopener noreferrer">Tickets</a>
         </div>
 
-        <div class="gig">
+        <div class="gig" data-date="2026-11-13">
           <div class="gig-info">
             <span class="gig-date">Fri 13 Nov</span>
             <span class="gig-name">With Vigilantes &amp; Iona Sky</span>
@@ -240,18 +252,61 @@
           <a class="gig-ticket" href="https://www.skiddle.com/whats-on/Peterborough/The-Met-Lounge/Vigilantes--special-guests-Iona-Sky--Wounded-Newt/42585133" target="_blank" rel="noopener noreferrer">Tickets</a>
         </div>
 
-        <div class="gig">
+        <div class="gig" data-date="2026-11-14">
           <div class="gig-info">
             <span class="gig-date">Sat 14 Nov · 1pm</span>
             <span class="gig-name">In-store</span>
             <span class="gig-venue">HMV, Peterborough</span>
           </div>
-          <span class="gig-ticket" style="cursor:default;">Free</span>
+          <span class="gig-ticket" style="cursor:default; pointer-events:none; opacity:0.5;">Free</span>
         </div>
 
       </div>
     </div>
 
+    <!-- MERCH -->
+    <div class="merch">
+      <h2 class="section-heading">Merch</h2>
+      <div class="merch-grid">
+
+        <a class="merch-tile" href="https://www.allthe.com/woundednewt/storefront/wounded-newt-t-shirts" target="_blank" rel="noopener noreferrer">
+          <img src="tshirt.jpg" alt="Wounded Newt t-shirt" />
+          <span class="merch-name">Wounded Newt T-shirt</span>
+          <span class="merch-price">£9 · Shop now</span>
+        </a>
+
+        <a class="merch-tile" href="https://elasticstage.com/woundednewt/releases/black-road-ep-singleep" target="_blank" rel="noopener noreferrer">
+          <img src="black-road-ep.jpg" alt="Black Road EP" />
+          <span class="merch-name">Black Road EP</span>
+          <span class="merch-price">Vinyl &amp; CD · Buy now</span>
+        </a>
+
+      </div>
+    </div>
+
   </div>
+
+  <script>
+    // Hide gigs the day after they happen
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    var gigs = document.querySelectorAll('.gig[data-date]');
+    var visible = 0;
+    gigs.forEach(function(gig) {
+      var d = new Date(gig.dataset.date);
+      d.setHours(0, 0, 0, 0);
+      // Hide if the gig date is before today
+      if (d < today) {
+        gig.style.display = 'none';
+      } else {
+        visible++;
+      }
+    });
+    // If nothing left, show a placeholder
+    if (visible === 0) {
+      var list = document.getElementById('gig-list');
+      list.innerHTML = '<p class="no-dates">No dates announced yet — check back soon.</p>';
+    }
+  </script>
 </body>
 </html>
